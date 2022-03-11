@@ -1,2 +1,23 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Welcome to gambling game");
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Gambling
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int Stake = 100;
+            int Bet = 1;
+        }
+
+
+
+
+    }
+
+
+}
