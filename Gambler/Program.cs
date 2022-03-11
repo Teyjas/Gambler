@@ -16,10 +16,10 @@ using System.Text;
             public static void PlayGame()
             {
 
-                const int StartingStake = 100;
-                const int BetPerGame = 1;
+                const int Stake = 100;
+                const int Bet = 1;
 
-                Gambler gambler1 = new Gambler(StartingStake);
+                Gambler gambler1 = new Gambler(Stake);
                 int Gamblers_Stake = gambler1.Gamblers_stake;
 
                 Random random = new Random();
@@ -27,10 +27,10 @@ using System.Text;
                 switch (WinOrLoose)
                 {
                     case 0:
-                        Gamblers_Stake = Gamblers_Stake - BetPerGame;
+                        Gamblers_Stake = Gamblers_Stake - Bet;
                         break;
                     case 1:
-                        Gamblers_Stake = Gamblers_Stake + BetPerGame;
+                        Gamblers_Stake = Gamblers_Stake + Bet;
                         break;
                 }
 
