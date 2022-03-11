@@ -3,21 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Gambling
-{
-    internal class Program
+    namespace Gambling
     {
-        static void Main(string[] args)
+        internal class Program
         {
+            static void Main(string[] args)
+            {
+                Console.WriteLine("welcome to gamblers game");
+                PlayGame();
+            }
 
-            int Stake = 100;
-            int Bet = 1;
+            public static void PlayGame()
+            {
+
+                const int StartingStake = 100;
+                const int BetPerGame = 1;
+
+                Gambler gambler1 = new Gambler(StartingStake);
+                int Gamblers_Stake = gambler1.Gamblers_stake;
+
+                Random random = new Random();
+                int WinOrLoose = random.Next(0, 2);
+                switch (WinOrLoose)
+                {
+                    case 0:
+                        Gamblers_Stake = Gamblers_Stake - BetPerGame;
+                        break;
+                    case 1:
+                        Gamblers_Stake = Gamblers_Stake + BetPerGame;
+                        break;
+                }
+
+                Console.WriteLine(Gamblers_Stake);
+            Console.ReadKey();
+
+            }
         }
-
-
-
-
     }
 
-
-}
